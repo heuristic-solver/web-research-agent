@@ -8,7 +8,7 @@ def display_results(result):
     print("\nRESULT:")
     print(textwrap.fill(result['answer'], width=80))
     
-    if result['sources']:
+    if result['sources']: #if results are found, print the sources 
         print("\nSOURCES:")
         for src in result['sources']:
             print(f"- {src['title']}\n  {src['url']}")
@@ -16,12 +16,12 @@ def display_results(result):
         print("\nNo sources available")
 
 def main():
-    agent = WebResearchAgent(SERPAPI_KEY, GEMINI_KEY)
+    agent = WebResearchAgent(SERPAPI_KEY, GEMINI_KEY) #initialize the research agent with given keys 
     
     print("Web Research Agent (using Gemini 1.5)")
     while True:
         query = input("\nEnter research query (or 'quit'): ").strip()
-        if query.lower() in ('quit', 'exit'):
+        if query.lower() in ('quit', 'exit'): #logic for user to exit 
             break
             
         print("\nResearching...")
