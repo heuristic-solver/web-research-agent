@@ -10,13 +10,5 @@ For no installation ease of use try the agent out from hugging face --> https://
 ```bash
 git clone https://github.com/yourusername/web_research_agent.git
 cd web_research_agent
-deactivate
-exit 
-
-
-
-fsdf
-f
-sdf
-sdfsd
-fsf
+```
+2. Install requirements from requirements.txt by using pip install <library>
