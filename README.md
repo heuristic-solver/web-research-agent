@@ -1,6 +1,6 @@
 # Web Research Agent 
 
-This is a smart research assistant that automates the process of findinig and summarizing information online for you. 
+This is a smart research assistant that automates the process of finding and summarizing information online for you. 
 
 For no installation ease of use try the agent out from hugging face --> https://huggingface.co/spaces/heuristic-solver/web_res_agent_joel 
 
