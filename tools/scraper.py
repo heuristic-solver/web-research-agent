@@ -41,4 +41,4 @@ class WebScraper: #agents to simulate different web browsers
                 print(f"Attempt {attempt + 1} failed for {url}: {str(e)}")
                 if attempt == max_retries - 1:
                     return None
-                time.sleep(2 ** attempt)
+                time.sleep(2 ** attempt) #retry with an exponential backoff 
