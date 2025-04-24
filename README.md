@@ -11,4 +11,4 @@ For no installation ease of use try the agent out from hugging face --> https://
 git clone https://github.com/yourusername/web_research_agent.git
 cd web_research_agent
 ```
-2. Install requirements from requirements.txt by using pip install <library>
+2. Install requirements from requirements.txt by using pip install "library name"
