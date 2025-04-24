@@ -11,4 +11,9 @@ For no installation ease of use try the agent out from hugging face --> https://
 git clone https://github.com/heuristic-solver/web_research_agent.git
 cd web_research_agent
 ```
-2. Install requirements from requirements.txt by using pip install "library name"
+2. Install requirements from requirements.txt by using pip install
+   Example:
+   ```bash
+    
+   pip install google-generativeai
+    ```
