@@ -7,26 +7,27 @@ from tools.scraper import WebScraper
 from tools.analyzer import ContentAnalyzer
 
 class WebResearchAgent:
+    #initialize the agent with API Keys
     def __init__(self, search_api_key: str, gemini_api_key: str):
         self.search_tool = WebSearchTool(search_api_key)
         self.scraper = WebScraper()
         self.analyzer = ContentAnalyzer(gemini_api_key)
         self.cache = {}
-    
+    #performs web search, scraping analysis 
     def research(self, query: str) -> Dict:
         try:
-            search_terms = self._analyze_query(query)
+            search_terms = self._analyze_query(query) #used to analyze the query to obtain search terms
             if not search_terms:
                 return self._empty_response(query, "Could not analyze query")
             
-            search_results = self.search_tool.search(search_terms)
+            search_results = self.search_tool.search(search_terms) #perform search with relevant search terms
             if not search_results:
                 return self._empty_response(query, "No search results found")
             
-            research_data = []
-            fallback_data = []
+            research_data = [] #list to store analyzed content 
+            fallback_data = [] #list to store results in case analysis fails 
             
-            for result in search_results[:3]:
+            for result in search_results[:3]: #Go through top 3 URL's 
                 url = result.get('link')
                 if not url:
                     continue
@@ -35,7 +36,7 @@ class WebResearchAgent:
                 if not content:
                     continue
                     
-                try:
+                try: #content analysis 
                     analysis = self.analyzer.analyze(content, query)
                     research_data.append({
                         'url': url,
@@ -43,15 +44,15 @@ class WebResearchAgent:
                         'content': content[:1000],
                         'analysis': analysis
                     })
-                except Exception as e:
+                except Exception as e: # If analysis fails, store fallback data without analysis
                     fallback_data.append({
                         'url': url,
                         'title': result.get('title', 'No title'),
                         'content': content[:1000]
                     })
                 
-                time.sleep(1)
-            
+                time.sleep(1) # Adding delay to prevent overwhelming the server with requests
+            # If no successful analysis, fallback with basic content information
             if not research_data and fallback_data:
                 research_data = [{
                     **item,
@@ -62,7 +63,7 @@ class WebResearchAgent:
                     }
                 } for item in fallback_data]
             
-            if research_data:
+            if research_data: # If data exists, synthesize results into a comprehensive response
                 return self._synthesize_results(query, research_data)
             return self._empty_response(query, "No valid content could be processed")
             
