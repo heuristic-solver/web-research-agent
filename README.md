@@ -3,6 +3,8 @@
 </div>
 
 This is a Python-based smart research agent that automates the process of finding and summarizing information online for you.
+![image](https://github.com/user-attachments/assets/552e06e3-da51-4192-b799-3cedac8ad1af)
+
 
 For no installation ease of use, try the agent out on Hugging Face:  
 [Web Research Agent on Hugging Face](https://huggingface.co/spaces/heuristic-solver/web_res_agent_joel)
