@@ -12,8 +12,10 @@ git clone https://github.com/heuristic-solver/web_research_agent.git
 cd web_research_agent
 ```
 2. Install requirements from "requirements.txt" by using "pip install"
-Example:
 
 ```bash
 pip install google-generativeai
 ```
+It is important to note that the same has to be done for all libraries in the requirements file. 
+
+3. 
