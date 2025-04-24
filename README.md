@@ -23,7 +23,7 @@ pip install -r requirements.txt
    Once you have the required API Keys, update them in config.py.
 
 4. Run the Application
-   To run this application use the following command in the terminal
+To run this application use the following command in the terminal
 
 ```bash
 python example_usage.py
