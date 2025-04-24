@@ -1,23 +1,17 @@
-<p align="center">
+<div align="center">
   <h1>Web Research Agent</h1>
-</p>
+</div>
 
-<p align="center">
-  This is a Python-based smart research agent that automates the process of finding and summarizing information online for you.
-</p>
+This is a Python-based smart research agent that automates the process of finding and summarizing information online for you.
 
-<p align="center">
-  <b>Try it live on Hugging Face:</b><br>
-  <a href="https://huggingface.co/spaces/heuristic-solver/web_res_agent_joel">
-    Web Research Agent on Hugging Face
-  </a>
-</p>
+For no installation ease of use, try the agent out on Hugging Face:  
+[Web Research Agent on Hugging Face](https://huggingface.co/spaces/heuristic-solver/web_res_agent_joel)
 
 ---
 
-<p align="center">
+<div align="center">
   <h2>Installation and Setup</h2>
-</p>
+</div>
 
 ### 1. Clone this Repo
 
@@ -27,6 +21,8 @@ cd web_research_agent
 ```
 
 ### 2. Install Requirements
+
+Install the required Python packages by running:
 
 ```bash
 pip install -r requirements.txt
@@ -39,17 +35,19 @@ You will need API keys for **SerpAPI** and **Gemini**:
 - [SerpAPI](https://serpapi.com/)
 - [Gemini API Key](https://aistudio.google.com/app/apikey)
 
-Once you have them, update `config.py`:
+Once you have the keys, update `config.py`:
 
 ```python
 # config.py
 SERPAPI_KEY = "YOUR_API_KEY"
 GEMINI_KEY = "YOUR_API_KEY"
-MAX_REQUESTS_PER_MINUTE = 2  # Rate Limits
-REQUEST_DELAY = 30           # Delay between requests in seconds
+MAX_REQUESTS_PER_MINUTE = 2
+REQUEST_DELAY = 30
 ```
 
 ### 4. Run the Application
+
+To run this application, use the following command in the terminal:
 
 ```bash
 python example_usage.py
@@ -57,31 +55,31 @@ python example_usage.py
 
 ---
 
-<p align="center">
+<div align="center">
   <h2>File Overview</h2>
-</p>
+</div>
 
-- **`config.py`** – Stores API keys and config settings.
-- **`web_search.py`** – Handles web searches via SerpAPI.
-- **`scraper.py`** – Scrapes and cleans web content.
-- **`analyzer.py`** – Analyzes content using Gemini.
-- **`example_usage.py`** – Sample interface to run the agent.
-- **`agent.py`** – Core agent logic for combining all modules.
+- **`config.py`** – Stores API keys and rate limit configuration.
+- **`web_search.py`** – Performs searches using SerpAPI.
+- **`scraper.py`** – Scrapes and cleans website content.
+- **`analyzer.py`** – Analyzes web content using the Gemini model.
+- **`example_usage.py`** – Sample interface to run the agent via CLI.
+- **`agent.py`** – Core logic that integrates search, scrape, and analysis.
 
 ---
 
-<p align="center">
+<div align="center">
   <h2>Troubleshooting</h2>
-</p>
+</div>
 
-- Check your API keys in `config.py`.
-- Ensure you have a working internet connection.
-- Be aware of API rate limits or usage caps.
+- Ensure your API keys are correct in `config.py`.
+- Make sure your internet connection is active.
+- Check for rate limits on your SerpAPI or Gemini usage.
 
 ---
 
-<p align="center">
+<div align="center">
   <h2>License</h2>
-</p>
+</div>
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
