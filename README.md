@@ -14,8 +14,20 @@ cd web_research_agent
 2. Install requirements from "requirements.txt" by using "pip install"
 
 ```bash
-pip install google-generativeai
+pip install -r requirements.txt
 ```
-It is important to note that the same has to be done for all libraries in the requirements file. 
 
-3. 
+3. Set up Configuration
+   You will need API Keys for SerpAPI and Gemini. For this you need to create an account from https://serpapi.com/ and https://aistudio.google.com/app/apikey
+
+   Once you have the required API Keys, update them in config.py.
+
+4. Run the Application
+   To run this application use the following command in the terminal
+
+```bash
+python example_usage.py
+```
+
+   
+
