@@ -18,7 +18,7 @@ For no installation ease of use, try the agent out on Hugging Face:
 ### 1. Clone this Repo
 
 ```bash
-git clone https://github.com/heuristic-solver/web_research_agent.git
+git clone https://github.com/heuristic-solver/web-research-agent.git
 cd web_research_agent
 ```
 
