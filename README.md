@@ -4,7 +4,7 @@ This is a smart research assistant that automates the process of findinig and su
 
 For no installation ease of use try the agent out from hugging face --> https://huggingface.co/spaces/heuristic-solver/web_res_agent_joel 
 
-# Instllation and Setup 
+# Installation and Setup 
 
 1. Clone this repo
 ```bash
